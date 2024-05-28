@@ -1,0 +1,1 @@
+python3 run_model.py -w weights/hybridnets.pth --source 'data/input' --output 'data/output' --show_seg True --imwrite False
