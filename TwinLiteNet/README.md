@@ -3,7 +3,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/twinlitenet-an-efficient-and-lightweight/drivable-area-detection-on-bdd100k-val)](https://paperswithcode.com/sota/drivable-area-detection-on-bdd100k-val?p=twinlitenet-an-efficient-and-lightweight)
 
 ## 
-TwinLiteNet [Link](https://github.com/chequanghuy/TwinLiteNet).
+TwinLiteNet GitHub [Link](https://github.com/chequanghuy/TwinLiteNet).
 
 
 ## Requirement
@@ -52,13 +52,6 @@ python3 val.py
 ```python
 python3 test_image.py
 ```
-
-## Acknowledgement
-Our source code is inspired by:
-- [ESPNet](https://github.com/sacmehta/ESPNet)
-- [YOLOP](https://github.com/hustvl/YOLOP)
-
-
 
 ## Citation
 
