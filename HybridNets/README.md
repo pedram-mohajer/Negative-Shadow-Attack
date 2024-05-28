@@ -1,40 +1,7 @@
 # HybridNets: End2End Perception Network
 
 
-HybridNet GitHub [Link](https://github.com/datvuthanh/HybridNets)  
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#project-structure">Project Structure</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#demo">Demo</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#data-preparation">Data Preparation</a></li>
-        <li><a href="#training">Training</a></li>
-      </ul>
-    </li>
-    <li><a href="#training-tips">Training Tips</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <li><a href="#citation">Citation</a></li>
-  </ol>
-</details>
-
+HybridNet GitHub [Link](https://github.com/datvuthanh/HybridNets) 
 
 ## About The Project
 <!-- #### <div align=center> **HybridNets** = **real-time** :stopwatch: * **state-of-the-art** :1st_place_medal: * (traffic object detection + drivable area segmentation + lane line detection) :motorway: </div> -->
