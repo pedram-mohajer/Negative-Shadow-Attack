@@ -3,18 +3,6 @@
 
 HybridNet GitHub [Link](https://github.com/datvuthanh/HybridNets)  
 
-
-> [**HybridNets: End-to-End Perception Network**](https://arxiv.org/abs/2203.09035)
->
-> by Dat Vu, Bao Ngo, [Hung Phan](https://scholar.google.com/citations?user=V3paQH8AAAAJ&hl=vi&oi=ao)<sup> :email:</sup>     [*FPT University*](https://uni.fpt.edu.vn/en-US/Default.aspx)
->
->  (<sup>:email:</sup>) corresponding author.
->
-> *arXiv technical report ([arXiv 2203.09035](https://arxiv.org/abs/2203.09035))*
-    
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hybridnets-end-to-end-perception-network-1/traffic-object-detection-on-bdd100k)](https://paperswithcode.com/sota/traffic-object-detection-on-bdd100k?p=hybridnets-end-to-end-perception-network-1)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hybridnets-end-to-end-perception-network-1/lane-detection-on-bdd100k)](https://paperswithcode.com/sota/lane-detection-on-bdd100k?p=hybridnets-end-to-end-perception-network-1)
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
