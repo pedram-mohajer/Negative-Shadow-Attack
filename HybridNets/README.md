@@ -1,21 +1,8 @@
 # HybridNets: End2End Perception Network
 
 
-<div align="center">
- 
-![logo](images/hybridnets.jpg)  
-**HybridNets Network Architecture.**  
+HybridNet GitHub [Link](https://github.com/datvuthanh/HybridNets)  
 
-[![Generic badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg?style=for-the-badge)](https://github.com/datvuthanh/HybridNets/blob/main/LICENSE) 
-[![PyTorch - Version](https://img.shields.io/badge/PYTORCH-1.10+-red?style=for-the-badge&logo=pytorch)](https://pytorch.org/get-started/locally/) 
-[![Python - Version](https://img.shields.io/badge/PYTHON-3.7+-red?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
-<br>
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url] -->
- 
-</div>
 
 > [**HybridNets: End-to-End Perception Network**](https://arxiv.org/abs/2203.09035)
 >
@@ -277,78 +264,6 @@ We experimented with training stages and found that this settings achieved the b
 
  The reason being detection head is harder to converge early on, so we basically skipped segmentation head to focus on detection first.
  
-## Results
-### Traffic Object Detection
- 
-<table>
-<tr><th>Result </th><th>Visualization</th></tr>
-<tr><td>
-
-|        Model       |  Recall (%)  |   mAP@0.5 (%)   |
-|:------------------:|:------------:|:---------------:|
-|     `MultiNet`     |     81.3     |       60.2      |
-|      `DLT-Net`     |     89.4     |       68.4      |
-|   `Faster R-CNN`   |     77.2     |       55.6      |
-|      `YOLOv5s`     |     86.8     |       77.2      |
-|       `YOLOP`      |     89.2     |       76.5      |
-|  **`HybridNets`**  |   **92.8**   |     **77.3**    |
-
-</td><td>
-
-<img src="images/det1.jpg" width="50%" /><img src="images/det2.jpg" width="50%" />
-
-</td></tr> </table>
- 
-<!--
-|        Model       |  Recall (%)  |   mAP@0.5 (%)   |
-|:------------------:|:------------:|:---------------:|
-|     `MultiNet`     |     81.3     |       60.2      |
-|      `DLT-Net`     |     89.4     |       68.4      |
-|   `Faster R-CNN`   |     77.2     |       55.6      |
-|      `YOLOv5s`     |     86.8     |       77.2      |
-|       `YOLOP`      |     89.2     |       76.5      |
-|  **`HybridNets`**  |   **92.8**   |     **77.3**    |
-
-<p align="middle">
- <img src="images/det1.jpg" width="49%" />
- <img src="images/det2.jpg" width="49%" /> 
-</p>
-
--->
- 
-### Drivable Area Segmentation
- 
-<table>
-<tr><th>Result </th><th>Visualization</th></tr>
-<tr><td>
-
-|       Model      | Drivable mIoU (%) |
-|:----------------:|:-----------------:|
-|    `MultiNet`    |        71.6       |
-|     `DLT-Net`    |        71.3       |
-|     `PSPNet`     |        89.6       |
-|      `YOLOP`     |        91.5       |
-| **`HybridNets`** |      **90.5**     |
-
-</td><td>
-
-<img src="images/road1.jpg" width="50%" /><img src="images/road2.jpg" width="50%" />
-
-</td></tr> </table>
- 
-<!--
-|       Model      | Drivable mIoU (%) |
-|:----------------:|:-----------------:|
-|    `MultiNet`    |        71.6       |
-|     `DLT-Net`    |        71.3       |
-|     `PSPNet`     |        89.6       |
-|      `YOLOP`     |        91.5       |
-| **`HybridNets`** |      **90.5**     |
-<p align="middle">
- <img src="images/road1.jpg" width="49%" />
- <img src="images/road2.jpg" width="49%" /> 
-</p>
--->
  
 ### Lane Line Detection
  
