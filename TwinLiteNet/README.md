@@ -48,21 +48,6 @@ python3 val.py
 python3 test_image.py
 ```
 
-## Visualize
-### Drive-able segmentation
-
-<div align=center>
-<img src='image\DA_vs.jpg' width='600'>
-</div>
-
-### Lane Detection
-
-<div align=center>
-<img src='image\LL_vs.jpg' width='600'>
-</div>
-
-
-
 ## Acknowledgement
 Our source code is inspired by:
 - [ESPNet](https://github.com/sacmehta/ESPNet)
