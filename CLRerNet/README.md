@@ -53,10 +53,6 @@ python tools/test.py configs/clrernet/culane/clrernet_culane_dla34_ema.py clrern
 
 For dataset preparation, please refer to [Dataset Preparation](docs/DATASETS.md).
 
-## Train
-
-Coming soon...
-
 
 ## Citation
 
@@ -68,12 +64,3 @@ Coming soon...
       year={2023},
 }
 ```
-
-## References
-
-* [Turoad/CLRNet](https://github.com/Turoad/CLRNet/)
-* [lucastabelini/LaneATT](https://github.com/lucastabelini/LaneATT)
-* [aliyun/conditional-lane-detection](https://github.com/aliyun/conditional-lane-detection)
-* [CULane Dataset](https://xingangpan.github.io/projects/CULane.html)
-* [open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection)
-* [optn-mmlab/mmcv](https://github.com/open-mmlab/mmcv)
