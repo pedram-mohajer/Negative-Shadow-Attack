@@ -30,11 +30,6 @@ pip install -r requirements.txt
             train/
             val/
 ```
-## Pipeline
-
-<div align=center>
-<img src='image\arch.png' width='600'>
-</div>
 
 ## Train
 ```python
