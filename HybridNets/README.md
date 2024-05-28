@@ -264,49 +264,6 @@ We experimented with training stages and found that this settings achieved the b
 
  The reason being detection head is harder to converge early on, so we basically skipped segmentation head to focus on detection first.
  
- 
-### Lane Line Detection
- 
-<table>
-<tr><th>Result </th><th>Visualization</th></tr>
-<tr><td>
-
-|      Model       | Accuracy (%) | Lane Line IoU (%) |
-|:----------------:|:------------:|:-----------------:|
-|      `Enet`      |     34.12    |       14.64       |
-|      `SCNN`      |     35.79    |       15.84       |
-|    `Enet-SAD`    |     36.56    |       16.02       |
-|      `YOLOP`     |     70.5     |        26.2       |
-| **`HybridNets`** |   **85.4**   |      **31.6**     |
-
-</td><td>
-
-<img src="images/lane1.jpg" width="50%" /><img src="images/lane2.jpg" width="50%" />
-
-</td></tr> </table>
- 
-<!--
-|      Model       | Accuracy (%) | Lane Line IoU (%) |
-|:----------------:|:------------:|:-----------------:|
-|      `Enet`      |     34.12    |       14.64       |
-|      `SCNN`      |     35.79    |       15.84       |
-|    `Enet-SAD`    |     36.56    |       16.02       |
-|      `YOLOP`     |     70.5     |        26.2       |
-| **`HybridNets`** |   **85.4**   |      **31.6**     |
- 
-<p align="middle">
- <img src="images/lane1.jpg" width="49%" />
- <img src="images/lane2.jpg" width="49%" /> 
-</p>
--->
-<div align="center">
- 
- ![](images/full_video.gif)
- 
- [Original footage](https://www.youtube.com/watch?v=lx4yA1LEi9c) courtesy of [Hanoi Life](https://www.youtube.com/channel/UChT1Cpf_URepCpsdIqjsDHQ)
- 
- </div>
- 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
