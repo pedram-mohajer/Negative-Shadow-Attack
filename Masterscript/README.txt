@@ -1,4 +1,19 @@
 
+# Project Configuration Guide
+
+This guide will help you set up the necessary configuration files and parameters for the project.
+
+---
+
+## 1️⃣ CONFIG.TXT
+
+Ensure the following paths are correctly set in your `CONFIG.TXT` file:
+
+/path/to/data/folder  
+/path/to/clrernet/dir  
+/path/to/hybridnets/dir  
+/path/to/twinlitenet/dir  
+
 ---
 
 ## 2️⃣ SHADOW_ATTRS.csv
@@ -9,7 +24,7 @@ The `SHADOW_ATTRS.csv` defines the attributes of shadows in the project. Here ar
 |------------------|--------------------------------------------------------|-------------------|
 | `width`          | Width (in meters) of the negative shadow               | `int`             |
 | `length`         | Length (in meters) of the negative shadow              | `int`             |
-| `beta`           | Rotation (in degrees) of the positive shadow            | `float`           |
+| `beta`           | Rotation (in degrees) of the positive shadow           | `float`           |
 | `transparency`   | Transparency (range: 0-255) of the positive shadow     | `int`             |
 | `blur`           | Degree of blur (softness) of the positive shadow       | `int`             |
 | `distance`       | Distance (in meters) from the center lane              | `int`             |
@@ -29,14 +44,5 @@ The `SHADOW_ATTRS.csv` defines the attributes of shadows in the project. Here ar
 
 1. Install the required dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-2. Run the main script:
-
-    ```bash
-    python3 masterscript.py
-    ```
-
----
+```bash
+pip install -r requirements.txt
