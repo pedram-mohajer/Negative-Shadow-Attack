@@ -1,13 +1,12 @@
-
 # Project Configuration Guide
 
-This guide will help you set up the necessary configuration files and parameters for the project.
+This guide outlines the necessary steps for setting up the configuration files and running the project.
 
 ---
 
-## 1️⃣ CONFIG.TXT
+## 1. CONFIG.TXT
 
-Ensure the following paths are correctly set in your `CONFIG.TXT` file:
+Ensure that the following paths are correctly set in your `CONFIG.TXT` file:
 
 /path/to/data/folder  
 /path/to/clrernet/dir  
@@ -16,33 +15,28 @@ Ensure the following paths are correctly set in your `CONFIG.TXT` file:
 
 ---
 
-## 2️⃣ SHADOW_ATTRS.csv
+## 2. SHADOW_ATTRS.csv
 
-The `SHADOW_ATTRS.csv` defines the attributes of shadows in the project. Here are the parameters:
+The `SHADOW_ATTRS.csv` defines the attributes of shadows. Below are the parameters:
 
-| **Attribute**    | **Description**                                        | **Type**          |
-|------------------|--------------------------------------------------------|-------------------|
-| `width`          | Width (in meters) of the negative shadow               | `int`             |
-| `length`         | Length (in meters) of the negative shadow              | `int`             |
-| `beta`           | Rotation (in degrees) of the positive shadow           | `float`           |
-| `transparency`   | Transparency (range: 0-255) of the positive shadow     | `int`             |
-| `blur`           | Degree of blur (softness) of the positive shadow       | `int`             |
-| `distance`       | Distance (in meters) from the center lane              | `int`             |
+- `width`: Width (in meters) of the negative shadow (int)
+- `length`: Length (in meters) of the negative shadow (int)
+- `beta`: Rotation (in degrees) of the positive shadow around the center (float)
+- `transparency`: Transparency (range: 0-255) of the positive shadow (int)
+- `blur`: Degree of blur (softness) of the positive shadow (int)
+- `distance`: Distance (in meters) from the center lane to place the shadow (int)
 
-### ⚙️ Editing Parameter Bounds
+### Editing Parameters
 
-- You can edit the bounds for these parameters in the file located at `data/attrs_files/build_csv.py`.
-- After editing, run the script to update the CSV files.
+You can edit parameter bounds in `data/attrs_files/build_csv.py`. After making the changes, run the file to apply updates.
 
-### 🛠️ Updating Masterscript
-
-- Specify the number of CSV files in the `NUM_CSV` variable within `masterscript.py`.
+Set the number of CSV files in the `NUM_CSV` variable inside `masterscript.py`.
 
 ---
 
-## 🚀 Running the Project
+## Running the Project
 
 1. Install the required dependencies:
 
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
