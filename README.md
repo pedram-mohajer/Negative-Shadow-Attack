@@ -1,4 +1,4 @@
-# 🕳️ Negative Shadow Attack: Adversarial Bright Patterns for Lane Detection Deception
+# 🕳️ Living in the Shadows: Practical Attack on Autonomous Vehicle Black-Box Lane Detection Systems
 
 This repository implements the **Negative Shadow (NS) attack**—a stealthy, non-invasive adversarial method that targets **Automated Lane Centering (ALC)** systems in Level 2 autonomous vehicles. By casting sunlight through physical occluders (e.g., canopies or fences), the attack produces bright, lane-like patterns that exploit intensity bias in LD preprocessing. These patterns cause the ALC system to misinterpret them as valid lane markings, leading to off-path deviations or unsafe maneuvers—without modifying the road or vehicle.
 
