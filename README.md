@@ -143,7 +143,5 @@ This work evaluates the robustness of several lane detection models as part of o
   journal={arXiv preprint arXiv:2203.09035},
   year={2022}
 }
-We thank the authors for making their models publicly available and enabling reproducible research.
-
-
 ```
+We thank the authors for making their models publicly available and enabling reproducible research.
