@@ -120,9 +120,9 @@ This research is intended solely for academic and ethical security analysis. All
 
 ---
 
-## 📄 Citation
+##  📝 Acknowledgments
 
-If you use this codebase or results, please cite the paper:
+This work evaluates the robustness of several lane detection models as part of our adversarial attack study. We gratefully acknowledge the authors and open-source implementations of the following models:
 
 ```
 @article{che2023twinlitenet,
@@ -143,5 +143,7 @@ If you use this codebase or results, please cite the paper:
   journal={arXiv preprint arXiv:2203.09035},
   year={2022}
 }
+We thank the authors for making their models publicly available and enabling reproducible research.
+
 
 ```
