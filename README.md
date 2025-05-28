@@ -72,7 +72,7 @@ By default, `main.py` runs search-based optimization. To run random sampling ins
 
 ```python
 if __name__ == "__main__":
-    main(n_samples=10000, search_based=False)
+    main(n_samples=1000, search_based=False)
 ```
 
 ### What It Does
@@ -98,7 +98,7 @@ results/
 pretrained/
 ├── twinlite/best.pth
 ├── hybrid/weights/
-└── clrernet_culane_dla34_ema.pth
+└── clrer/configs/clrernet_culane_dla34_ema.pth
 ```
 
 ---
@@ -109,26 +109,10 @@ pretrained/
 
 Fitness is based on:
 - **Detector Fooling**: overlap between NS region and predicted lanes
-- **Geometric Realism**: shadow length, width, distance to lane, and angle
+- **Parameter Tuning**: Encourages shadows with width \(W\), length \(L\), distance \(D\), and angle \(\beta\) values that align with ranges empirically shown to confuse LD models.
 
 Top candidates are retained and mutated over generations to find stealthy yet effective shadows.
 
----
-
-## 📊 Analysis
-
-To interpret detection patterns:
-
-```python
-from range_finder import analyse
-analyse("NS_Images_BEV/shadow_lengths.csv", results_bool)
-```
-
-This prints:
-- Parameter ranges associated with misclassified cases
-- Interpretable decision tree showing detection boundaries (requires `scikit-learn`)
-
----
 
 ## 🛡️ Disclaimer
 
@@ -141,9 +125,23 @@ This research is intended solely for academic and ethical security analysis. All
 If you use this codebase or results, please cite the paper:
 
 ```
-@inproceedings{negative_shadow2025,
-  title     = {Living in the Shadows: Practical Attack on Autonomous Vehicle Lane Detection},
-  booktitle = {USENIX Security '25},
-  year      = {2025}
+@article{che2023twinlitenet,
+  title={TwinLiteNet: An Efficient and Lightweight Model for Driveable Area and Lane Segmentation in Self-Driving Cars},
+  author={Che, Quang Huy and Nguyen, Dinh Phuc and Pham, Minh Quan and Lam, Duc Khai},
+  journal={arXiv preprint arXiv:2307.10705},
+  year={2023}
 }
+@article{honda2023clrernet,
+  title={CLRerNet: Improving Confidence of Lane Detection with LaneIoU},
+  author={Honda, Hiroto and Uchida, Yusuke},
+  journal={arXiv preprint arXiv:2305.08366},
+  year={2023}
+}
+@article{vu2022hybridnets,
+  title={Hybridnets: End-to-end perception network},
+  author={Vu, Dat and Ngo, Bao and Phan, Hung},
+  journal={arXiv preprint arXiv:2203.09035},
+  year={2022}
+}
+
 ```
