@@ -114,7 +114,8 @@ Fitness is based on:
 Top candidates are retained and mutated over generations to find stealthy yet effective shadows.
 
 
-## 🧠 How the Genetic Algorithm Works (Step-by-Step)
+## 🧠 Search-Based Negative Shadow Generation via Genetic Algorithm (Step-by-Step)
+
 
 The search-based Negative Shadow (NS) attack uses a Genetic Algorithm (GA) to evolve adversarial shadow patterns that fool lane detection (LD) models. Each candidate shadow is parameterized by geometric and photometric features and evaluated over multiple generations to maximize its effectiveness. Below is a detailed step-by-step explanation of the algorithm:
 
