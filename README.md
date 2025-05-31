@@ -114,6 +114,83 @@ Fitness is based on:
 Top candidates are retained and mutated over generations to find stealthy yet effective shadows.
 
 
+## 🧠 How the Genetic Algorithm Works (Step-by-Step)
+
+The search-based Negative Shadow (NS) attack uses a Genetic Algorithm (GA) to evolve adversarial shadow patterns that fool lane detection (LD) models. Each candidate shadow is parameterized by geometric and photometric features and evaluated over multiple generations to maximize its effectiveness. Below is a detailed step-by-step explanation of the algorithm:
+
+1. **Inputs**: The algorithm takes:
+   - `P`: population size
+   - `G`: number of generations
+   - `I_BEV`: bird’s-eye-view image
+   - `H_BEV→DRV`: homography to map BEV to driver-view
+   - `M_px`: meters-per-pixel scaling factor
+
+2. **LD Models**: The attack targets three models:
+   - TwinLiteNet
+   - HybridNets
+   - CLRerNet
+
+3. **Parameter Bounds**: Each shadow is defined by:
+   - Width `W ∈ [0.1, 3.6]` meters
+   - Length `L ∈ [1, 40]` meters
+   - Lateral distance `D ∈ [0.1, 3.5]` meters
+   - Angle `β ∈ [0°, 90°]`
+
+4. **Candidate Sampling**: For each individual in the population, the algorithm randomly samples pixel values:
+   - `y1`: initial vertical position
+   - `h`: height
+   - `y2 = y1 + h`
+   - `y3`: for slope
+   - `x`: lateral placement
+
+5. **Polygon Formation**: These values define a convex quadrilateral `P_BEV`. Convexity is enforced.
+
+6. **Photometric Modification**:
+   - Convert `I_BEV` to LAB space → `(L*, a*, b*)`
+   - Brighten `L*` within the polygon by `Δ_L* = 20`
+   - Convert back to RGB to get modified `I_BEV'`
+
+7. **Warping to Driver View**:
+   - Apply `H_BEV→DRV` to generate `I_DRV` (driver-perspective image)
+
+8. **Geometry Extraction**:
+   - `L_i`: physical length of the shadow
+   - `W_i`: width in meters
+   - `D_i`: lateral offset from a reference line
+   - `β_i`: angle from vertical axis
+
+9. **Model Evaluation**:
+   - For each LD model:
+     - Predict line mask `M_LD_k`
+     - Compute overlap ratio:
+       ```
+       γ_k = |P_DRV ∩ M_LD_k| / |P_DRV|
+       ```
+     - Assign detection flag:
+       ```
+       δ_k = 1 if γ_k > τ, else 0
+       ```
+
+10. **Fitness Calculation**:
+    - Each candidate is scored as:
+      ```
+      f_i = 0.5 * avg(γ_1, γ_2, γ_3) + 0.5 * avg(δ_1, δ_2, δ_3)
+      ```
+    - This balances how strongly and consistently the NS fools detectors.
+
+11. **Selection & Evolution**:
+    - Retain the top 50% by fitness
+    - Use crossover and mutation to regenerate the rest
+    - Repeat for `G` generations
+
+12. **Output**:
+    - Optimized NS patterns
+    - Corresponding driver-view images
+    - Detection logs and overlap scores
+    - `shadow_lengths.csv` with geometry metadata
+
+
+
 ## 🛡️ Disclaimer
 
 This research is intended solely for academic and ethical security analysis. All experiments were run in simulation or controlled conditions. The NS attack demonstrates vulnerabilities in lane detection pipelines and emphasizes the need for robust defenses in AV perception systems.
